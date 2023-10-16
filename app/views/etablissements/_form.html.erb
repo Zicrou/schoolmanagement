@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center">
+  <%= form_with(model: etablissement) do |form| %>
+    <% if etablissement.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(etablissement.errors.count, "error") %> prohibited this etablissement from being saved:</h2>
+
+        <ul>
+          <% etablissement.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name, class:"form-control md-4" %>
+    </div>
+
+    <div class="form-group mt-2">
+      <%= form.submit "Valider", class:"btn btn-primary col-md-4"  %>
+    </div>
+  <% end %>
+</div>
