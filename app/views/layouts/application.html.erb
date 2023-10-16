@@ -6,11 +6,41 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "sidebars", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <!--link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" -->
+
+       <!-- Bootstrap core CSS -->
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "shared/header" %>
+    <div class="row">
+      <div class="col-md-4">
+        <%= render "shared/sidebar" %>
+      </div>
+      <div class="col-md-8">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="mx-3">
+  <h2><%= link_to "Acceuil", root_path, class:"btn btn-secondary" %></h2>
+</div>
+
+<h1><%= link_to "Ajouter un niveau", new_niveau_path %></h1>
+
+
+<div class="d-flex justify-content-center">
+  <div id="niveaus">
+    <% @niveaus.each do |niveau| %>
+      <%= render niveau %>
+      <p>
+        <%= link_to "Show this niveau", niveau %>
+      </p>
+    <% end %>
+  </div>
+</div>
+

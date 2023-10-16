@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex justify-content-center">
+  <%= render @niveau %>
+</div>
+
+<div class="d-flex justify-content-center">
+  <%= link_to "Edit this niveau", edit_niveau_path(@niveau), class:"btn btn-outline-primary mx-3" %>
+  <%= link_to "Back to niveaus", niveaus_path, class:"btn btn-outline-warning" %>
+</div>
+
+
+<div class="d-flex justify-content-center mt-3">
+  <%= button_to "Destroy this niveau", @niveau, method: :delete, class:"btn btn-outline-danger" %>
+</div>

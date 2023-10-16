@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :classrooms
+  resources :niveaus
   #get 'home/index'
   resources :students
   resources :etablissements
