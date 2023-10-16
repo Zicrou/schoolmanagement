@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex justify-content-center">
+  <%= render @student %>
+</div>
+
+<div class="d-flex justify-content-center">
+  <%= link_to "Modifer", edit_student_path(@student), class:"btn btn-outline-primary mx-3" %>
+  <%= link_to "Retour", students_path, class:"btn btn-outline-warning" %>
+</div>
+<br>
+<div class="d-flex justify-content-center">
+  <%= button_to "Supprimé", @student, method: :delete, class:"btn btn-outline-danger" %>
+</div>

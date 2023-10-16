@@ -1,0 +1,7 @@
+Each etablissement have {
+    ->Niveau{
+        ->Elementaire
+        ->College
+        ->Secondaire
+    }
+}
